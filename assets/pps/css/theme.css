@@ -1,0 +1,472 @@
+@import 'bootstrap.min.css';
+@import 'pps-style.css';
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+body,
+input,
+select,
+textarea {
+  font-family: 'PT Sans', sans-serif;
+  color: #6d6d6d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+body {
+  background: #1f2121;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+a:link,
+a:visited {
+  color: #71ad18;
+}
+#outwrap {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.shagen {
+  margin: 0px auto 0px;
+}
+.shagen .topbar {
+  min-height: 40px;
+  line-height: 40px;
+  background: #191919;
+  color: #DDD;
+  font-size: 14px;
+}
+.shagen .topbar .infobox {
+  text-align: right;
+}
+.shagen .topbar a {
+  color: #DDD;
+  margin: 0px 5px;
+}
+.shagen .topbar .flag {
+  line-height: 1;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.shagen #header {
+  background: #222;
+  color: #eee;
+  padding: 10px 0px;
+}
+.shagen #header #logo {
+  margin: 25px 0px;
+  display: block;
+}
+.shagen #header .nav-toggle {
+  position: absolute;
+  right: 15px;
+  top: -50px;
+  font-size: 24px;
+  display: block;
+  cursor: pointer;
+  display: none;
+}
+.shagen #header ul#nav {
+  list-style: none;
+  margin: 25px 0px;
+  padding: 0px 0px;
+  text-align: right;
+}
+.shagen #header ul#nav li {
+  display: inline-block;
+  margin: 0px 10px;
+  font-weight: 600;
+}
+.shagen #header ul#nav li a:link,
+.shagen #header ul#nav li a:visited {
+  color: #aaa;
+}
+.shagen #header ul#nav li a:hover {
+  color: #fff;
+}
+.shagen #header ul#nav li a.active {
+  color: #7ec01e;
+}
+.shagen #content {
+  padding: 0px 0px;
+  background: #fafafa;
+}
+.shagen #content #msg_error,
+.shagen #content #msg_notice,
+.shagen #content #msg_warning {
+  margin-top: 30px;
+}
+.shagen #content #landing_page .lead-info {
+  background: url(../images/hero.jpg);
+  background-size: cover;
+  padding: 150px 50px ;
+  text-align: center;
+  color: #fff;
+}
+.shagen #content #landing_page .lead-info h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0px 0px 30px 0px;
+  color: #fff;
+}
+.shagen #content #landing_page .lead-info p {
+  font-size: 18px;
+}
+.shagen #content #landing_page .ticket_action {
+  padding: 100px 0px 50px 0px;
+  text-align: center;
+}
+.shagen #content #landing_page .ticket_action .action-cover {
+  border: 1px solid #ccc;
+  padding: 50px 30px 0px 30px;
+  position: relative;
+}
+.shagen #content #landing_page .ticket_action .action-cover span {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  background: #7ec01e;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+.shagen #content #landing_page .ticket_action .action-cover h3 {
+  color: #111;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.shagen #content #landing_page .ticket_action .action-cover .front-page-button {
+  margin: 30px 0px 50px 0px;
+}
+.shagen #content #landing_page .ticket_action .action-cover .front-page-button a.button {
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.shagen #content #landing_page .ticket_action .action-cover .front-page-button a.green {
+  background: #1BBD98;
+}
+.shagen #content #landing_page .ticket_action .action-cover .front-page-button a.blue {
+  background: #3C9AD8;
+}
+.shagen #content .inwrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.shagen #content .inwrap h1 {
+  font-size: 26px;
+  margin: 10px 0px 10px 0px;
+  color: #222;
+}
+.shagen #content .inwrap #ticketForm,
+.shagen #content .inwrap #profileForm,
+.shagen #content .inwrap #editTicket {
+  margin: 30px 0px;
+}
+.shagen #content .inwrap #ticketForm .required,
+.shagen #content .inwrap #profileForm .required,
+.shagen #content .inwrap #editTicket .required {
+  font-weight: bold;
+}
+.shagen #content .inwrap #ticketForm .panel,
+.shagen #content .inwrap #profileForm .panel,
+.shagen #content .inwrap #editTicket .panel {
+  width: 100%;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-heading em,
+.shagen #content .inwrap #profileForm .panel .panel-heading em,
+.shagen #content .inwrap #editTicket .panel .panel-heading em {
+  font-style: normal;
+  font-size: 14px;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-heading h3.panel-title,
+.shagen #content .inwrap #profileForm .panel .panel-heading h3.panel-title,
+.shagen #content .inwrap #editTicket .panel .panel-heading h3.panel-title {
+  font-weight: 800;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-body table,
+.shagen #content .inwrap #profileForm .panel .panel-body table,
+.shagen #content .inwrap #editTicket .panel .panel-body table {
+  width: 100%;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-body table td,
+.shagen #content .inwrap #profileForm .panel .panel-body table td,
+.shagen #content .inwrap #editTicket .panel .panel-body table td {
+  padding: 5px 0px;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-body table td .redactor_box,
+.shagen #content .inwrap #profileForm .panel .panel-body table td .redactor_box,
+.shagen #content .inwrap #editTicket .panel .panel-body table td .redactor_box {
+  border: 1px solid #ddd;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-body table td label,
+.shagen #content .inwrap #profileForm .panel .panel-body table td label,
+.shagen #content .inwrap #editTicket .panel .panel-body table td label {
+  display: block;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-body table td .error,
+.shagen #content .inwrap #profileForm .panel .panel-body table td .error,
+.shagen #content .inwrap #editTicket .panel .panel-body table td .error {
+  font-size: 12px;
+  color: red;
+}
+.shagen #content .inwrap #ticketForm .panel .panel-body .error,
+.shagen #content .inwrap #profileForm .panel .panel-body .error,
+.shagen #content .inwrap #editTicket .panel .panel-body .error {
+  font-size: 12px;
+  color: red;
+}
+.shagen #content .inwrap #clientLogin {
+  margin: 30px 0px;
+}
+.shagen #content .inwrap .ticketlist {
+  margin: 20px 0px;
+}
+.shagen #content .inwrap .ticketlist a.refresh {
+  margin: 5px 10px;
+  display: block;
+}
+.shagen #content .inwrap .ticketlist #ticketTable {
+  margin: 0px 0px;
+}
+.shagen #content .inwrap .ticketlist #ticketTable caption {
+  border-top: 1px solid #ddd;
+  text-align: left;
+  color: #222;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+.shagen #content .inwrap .ticketlist #ticketTable th {
+  background: #eee;
+}
+.shagen #content .inwrap .ticketlist #ticketTable th a {
+  color: #666;
+}
+.shagen #content .inwrap .ticketlist #ticketTable tbody {
+  font-size: 14px;
+}
+.shagen #content .inwrap span.refresh i {
+  color: #fff;
+}
+.shagen #content .inwrap a.action-button {
+  color: #fff;
+}
+.shagen #content .inwrap #ticketInfo {
+  font-size: 14px;
+  color: #333;
+}
+.shagen #content .inwrap #ticketInfo td h1 {
+  font-size: 16px;
+}
+.shagen #content .inwrap .subject {
+  color: #222;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.shagen #content .inwrap #ticketThread table.thread-entry {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.shagen #content .inwrap #ticketThread table.thread-entry td.info {
+  padding: 10px 20px;
+  border-top: 1px solid #eee;
+}
+.shagen #content .inwrap #ticketThread table.message {
+  border: 1px solid  #D9EDF7;
+}
+.shagen #content .inwrap #ticketThread table.message th {
+  background: #D9EDF7;
+  padding: 10px 20px;
+  color: #333;
+}
+.shagen #content .inwrap #ticketThread table.message td.thread-body div {
+  padding: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: 'Lato';
+}
+.shagen #content .inwrap #ticketThread table.response {
+  border: 1px solid #F2DEDE;
+}
+.shagen #content .inwrap #ticketThread table.response th {
+  background: #F2DEDE;
+  padding: 10px 20px;
+  color: #333;
+}
+.shagen #content .inwrap #ticketThread table.response td.thread-body div {
+  padding: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: 'Lato';
+}
+.shagen #content .inwrap #msg_info {
+  position: relative;
+}
+.shagen #content .inwrap #msg_info i {
+  margin: 10px 20px 0px 0px;
+}
+.shagen #content .inwrap .faqlist {
+  margin: 30px 0px;
+}
+.shagen #content .inwrap .faqlist #kb {
+  margin: 20px 0px;
+  padding: 0px;
+  list-style: none;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.shagen #content .inwrap .faqlist #kb li {
+  border-bottom: 1px solid #eee;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  font-size: 14px;
+}
+.shagen #content .inwrap .faqlist #kb li h4 {
+  margin: 0px;
+  font-size: 16px;
+}
+.shagen #content .inwrap .faqlist #kb li:last-child {
+  border: none;
+}
+.shagen #content .inwrap .faqlist #kb li i {
+  position: relative;
+  font-style: normal;
+}
+.shagen #content .inwrap .faqlist #kb li i:before {
+  content: "\F07B";
+  font-family: FontAwesome;
+  font-size: 24px;
+  color: #222;
+  position: absolute;
+  left: -35px;
+}
+.shagen #content .inwrap .faqlist #faq ol {
+  margin: 20px 0px;
+  padding: 0px;
+  list-style: none;
+}
+.shagen #content .inwrap .faqlist #faq ol li {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-left: 30px;
+  position: relative;
+}
+.shagen #content .inwrap .faqlist #faq ol li:first-child {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.shagen #content .inwrap .faqlist #faq ol li:before {
+  content: "\F15C";
+  font-family: FontAwesome;
+  color: #222;
+  position: absolute;
+  left: 5px;
+}
+.shagen #content .inwrap .single-faq {
+  margin: 20px 0px;
+}
+.shagen #content .inwrap .single-faq .faq-entry {
+  padding: 30px 30px;
+}
+.shagen #content .inwrap .single-faq .faq-entry h3 {
+  margin: 0px 0px 20px 0px;
+  color: #222;
+  font-size: 32px;
+}
+#footer {
+  background: #1f2121;
+  color: #fff;
+  padding: 30px 0px;
+}
+#footer .social-icons ul {
+  list-style: none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px;
+  text-align: right;
+}
+#footer .social-icons ul li {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  margin: 0px 5px;
+  text-align: center;
+}
+#footer .social-icons ul li a {
+  display: block;
+  color: #fff;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+#footer .social-icons ul li a:hover {
+  color: #7ec01e;
+}
+#footer p {
+  color: #ddd;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+#footer p a {
+  color: #ddd;
+}
+@media screen and (max-width: 767px) {
+  .shagen .topbar .infobox,
+  .shagen .flagbox {
+    text-align: center;
+  }
+  .shagen #header .nav-toggle {
+    display: block;
+  }
+  .shagen #header ul#nav {
+    display: none;
+    margin-bottom: 10px;
+  }
+  .shagen #header ul#nav li {
+    display: block;
+    text-align: center;
+    padding: 5px 0px;
+    border-bottom: 1px solid #333;
+  }
+  .shagen #header ul#nav li:first-child {
+    border-top: 1px solid #333;
+  }
+  #footer {
+    text-align: center;
+  }
+  #footer .social-icons ul {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
