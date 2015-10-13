@@ -114,7 +114,30 @@ padding: 40px 0px;
 .ppsbootstrap #content #msg_error,
 .ppsbootstrap #content #msg_notice,
 .ppsbootstrap #content #msg_warning {
-  margin-top: 30px;
+  1margin-top: 30px;
+}
+
+/* Notify */
+
+.alert-minimalist {
+  border-radius: 3px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  padding: 20px;
+}
+.alert-minimalist > [data-notify="icon"] {
+	height: 50px;
+	margin-right: 12px;
+}
+.alert-minimalist > [data-notify="title"] {
+	color: #a94442;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.alert-minimalist > [data-notify="message"] {
+	font-size: 80%;
 }
 
  .ticket_action {
