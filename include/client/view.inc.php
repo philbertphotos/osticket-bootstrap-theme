@@ -1,4 +1,4 @@
-<div class="container"> <div class="row"> 
+<div class="container ticketheader"> <div class="row"> 
 <div class="col-md-12 inwrap">
 <?php
 if(!defined('OSTCLIENTINC') || !$thisclient || !$ticket || !$ticket->checkUserAccess($thisclient)) die('Access Denied!');

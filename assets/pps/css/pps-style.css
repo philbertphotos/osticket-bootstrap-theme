@@ -49,6 +49,9 @@ a:visited {
 .topheader {
 padding: 18px 0 0 48px;
 }
+.ticketheader {
+padding: 30px 0 0 48px;
+}
 .ppsbootstrap #content {
   padding: 0px 0px;
   background: #fafafa;
