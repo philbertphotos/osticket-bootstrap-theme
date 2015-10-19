@@ -1,0 +1,856 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+html, body {
+  height: 100%;
+}
+input,
+select,
+textarea {
+  font-family: 'PT Sans', sans-serif;
+  color: #6d6d6d;
+  font-size: 16px;
+  line-height: 1.6;
+  
+}
+body {
+  background: #1f2121;
+  height: 100%;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+a:link,
+a:visited {
+  color: #71ad18;
+}
+#outwrap {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.ppsbootstrap {
+  margin: 0px auto 0px;
+}
+.topheader {
+padding: 18px 0 0 48px;
+}
+.ppsbootstrap #content {
+  padding: 0px 0px;
+  background: #fafafa;
+}
+.ppsbootstrap #content #msg_error,
+.ppsbootstrap #content #msg_notice,
+.ppsbootstrap #content #msg_warning {
+  margin-top: 50px;
+}
+
+.ticket_action {
+  padding: 20px 0px 50px 0px;
+  text-align: center;
+}
+ .ticket_action .action-cover {
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  padding: 50px 30px 0px 30px;
+  position: relative;
+}
+ .ticket_action .action-cover span {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  background: #7ec01e;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+ .ticket_action .action-cover h3 {
+  color: #111;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+ .ticket_action .action-cover .front-page-button {
+  margin: 30px 0px 50px 0px;
+}
+
+.button {
+  background: #08bb86;
+  border: none;
+  color: #fff;
+  font-weight: 800;
+  margin-top: 25px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  line-height: 1;
+}
+ .ticket_action .action-cover .front-page-button a.button {
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+ .ticket_action .action-cover .front-page-button a.green {
+  background: #1BBD98;
+}
+ .ticket_action .action-cover .front-page-button a.blue {
+  background: #3C9AD8;
+}
+.ppsbootstrap #content {
+  1padding-top: 30px;
+  1padding-bottom: 30px;
+}
+.ppsbootstrap #content h1 {
+  font-size: 26px;
+  margin: 10px 0px 10px 0px;
+  color: #222;
+}
+.ppsbootstrap #content #ticketForm,
+.ppsbootstrap #content #profileForm,
+.ppsbootstrap #content #editTicket {
+  margin: 30px 0px;
+}
+.ppsbootstrap #content #ticketForm .required,
+.ppsbootstrap #content #profileForm .required,
+.ppsbootstrap #content #editTicket .required {
+  font-weight: bold;
+}
+.ppsbootstrap #content #ticketForm .panel,
+.ppsbootstrap #content #profileForm .panel,
+.ppsbootstrap #content #editTicket .panel {
+  width: 100%;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-heading em,
+.ppsbootstrap #content #profileForm .panel .panel-heading em,
+.ppsbootstrap #content #editTicket .panel .panel-heading em {
+  font-style: normal;
+  font-size: 14px;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-heading h3.panel-title,
+.ppsbootstrap #content #profileForm .panel .panel-heading h3.panel-title,
+.ppsbootstrap #content #editTicket .panel .panel-heading h3.panel-title {
+  font-weight: 800;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-body table,
+.ppsbootstrap #content #profileForm .panel .panel-body table,
+.ppsbootstrap #content #editTicket .panel .panel-body table {
+  width: 100%;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-body table td,
+.ppsbootstrap #content #profileForm .panel .panel-body table td,
+.ppsbootstrap #content #editTicket .panel .panel-body table td {
+  padding: 5px 0px;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-body table td .redactor_box,
+.ppsbootstrap #content #profileForm .panel .panel-body table td .redactor_box,
+.ppsbootstrap #content #editTicket .panel .panel-body table td .redactor_box {
+  border: 1px solid #ddd;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-body table td label,
+.ppsbootstrap #content #profileForm .panel .panel-body table td label,
+.ppsbootstrap #content #editTicket .panel .panel-body table td label {
+  display: block;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-body table td .error,
+.ppsbootstrap #content #profileForm .panel .panel-body table td .error,
+.ppsbootstrap #content #editTicket .panel .panel-body table td .error {
+  font-size: 12px;
+  color: red;
+}
+.ppsbootstrap #content #ticketForm .panel .panel-body .error,
+.ppsbootstrap #content #profileForm .panel .panel-body .error,
+.ppsbootstrap #content #editTicket .panel .panel-body .error {
+  font-size: 12px;
+  color: red;
+}
+.ppsbootstrap #content #clientLogin {
+  margin: 30px 0px;
+}
+.ppsbootstrap #content .ticketlist {
+  margin: 20px 0px;
+}
+.ppsbootstrap #content .ticketlist a.refresh {
+  margin: 5px 10px;
+  display: block;
+}
+.ppsbootstrap #content .ticketlist #ticketTable {
+  margin: 0px 0px;
+}
+.ppsbootstrap #content .ticketlist #ticketTable caption {
+  border-top: 1px solid #ddd;
+  text-align: left;
+  color: #222;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+.ppsbootstrap #content .ticketlist #ticketTable th {
+  background: #eee;
+}
+.ppsbootstrap #content .ticketlist #ticketTable th a {
+  color: #666;
+}
+.ppsbootstrap #content .ticketlist #ticketTable tbody {
+  font-size: 14px;
+}
+.ppsbootstrap #content span.refresh i {
+  color: #fff;
+}
+.ppsbootstrap #content a.action-button {
+  color: #fff;
+}
+.ppsbootstrap #content #ticketInfo {
+  font-size: 14px;
+  color: #333;
+}
+.ppsbootstrap #content #ticketInfo td h1 {
+  font-size: 16px;
+}
+.ppsbootstrap #content .subject {
+  color: #222;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+#ticketThread div.thread-entry {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#ticketThread div.thread-entry td.info {
+  padding: 10px 20px;
+  border-top: 1px solid #eee;
+}
+#ticketThread div.message {
+  border: 1px solid  #D9EDF7;
+}
+#ticketThread div.message  {
+  background: #D9EDF7;
+  padding: 10px 20px;
+  color: #333;
+}
+#ticketThread div.message div.thread-body div {
+  padding: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: 'Lato';
+}
+#ticketThread table.response {
+  border: 1px solid #F2DEDE;
+}
+#ticketThread table.response th {
+  background: #F2DEDE;
+  padding: 10px 20px;
+  color: #333;
+}
+#ticketThread table.response td.thread-body div {
+  padding: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: 'Lato';
+}
+.ppsbootstrap #content #msg_info {
+  position: relative;
+}
+.ppsbootstrap #content #msg_info i {
+  margin: 10px 20px 0px 0px;
+}
+.ppsbootstrap #content .faqlist {
+  margin: 30px 0px;
+}
+.ppsbootstrap #content .faqlist #kb {
+  margin: 20px 0px;
+  padding: 0px;
+  list-style: none;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.ppsbootstrap #content .faqlist #kb li {
+  border-bottom: 1px solid #eee;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  font-size: 14px;
+}
+.ppsbootstrap #content .faqlist #kb li h4 {
+  margin: 0px;
+  font-size: 16px;
+}
+.ppsbootstrap #content .faqlist #kb li:last-child {
+  border: none;
+}
+.ppsbootstrap #content .faqlist #kb li i {
+  position: relative;
+  font-style: normal;
+}
+.ppsbootstrap #content .faqlist #kb li i:before {
+  content: "\F07B";
+  font-family: FontAwesome;
+  font-size: 24px;
+  color: #222;
+  position: absolute;
+  left: -35px;
+}
+.ppsbootstrap #content .faqlist #faq ol {
+  margin: 20px 0px;
+  padding: 0px;
+  list-style: none;
+}
+.ppsbootstrap #content .faqlist #faq ol li {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-left: 30px;
+  position: relative;
+}
+.ppsbootstrap #content .faqlist #faq ol li:first-child {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.ppsbootstrap #content .faqlist #faq ol li:before {
+  content: "\F15C";
+  font-family: FontAwesome;
+  color: #222;
+  position: absolute;
+  left: 5px;
+}
+.ppsbootstrap #content .single-faq {
+  margin: 20px 0px;
+}
+.ppsbootstrap #content .single-faq .faq-entry {
+  padding: 30px 30px;
+}
+.ppsbootstrap #content .single-faq .faq-entry h3 {
+  margin: 0px 0px 20px 0px;
+  color: #222;
+  font-size: 32px;
+}
+
+#kb-search {
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+#kb-search .button {
+    background: #222534 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+.kb-results ul#kb {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #e2e2e2 #e2e2e2 -moz-use-text-color;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    list-style: outside none none;
+    margin: 20px 0;
+    padding: 0;
+}
+.kb-results ul#kb li h4 a {
+    color: #111;
+}
+.kb-results ul#kb li {
+    border-bottom: 1px solid #e2e2e2;
+    color: #999;
+    font-size: 14px;
+    padding: 15px;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.footer .info{
+padding: 20px 10px;
+}
+#footer {
+  background: #1f2121;
+  color: #fff;
+  padding: 30px 0px;
+}
+#footer p {
+  color: #ddd;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+#footer p a {
+  color: #ddd;
+}
+@media screen and (max-width: 767px) {
+  .ppsbootstrap .topbar .infobox,
+  .ppsbootstrap .flagbox {
+    text-align: center;
+  }
+  .ppsbootstrap #header .nav-toggle {
+    display: block;
+  }
+  .ppsbootstrap #header ul#nav {
+    display: none;
+    margin-bottom: 10px;
+  }
+  .ppsbootstrap #header ul#nav li {
+    display: block;
+    text-align: center;
+    padding: 5px 0px;
+    border-bottom: 1px solid #333;
+  }
+  .ppsbootstrap #header ul#nav li:first-child {
+    border-top: 1px solid #333;
+  }
+  #footer {
+    text-align: center;
+  }
+}
+/** Stuff **/
+/* -----------------------------------------------
+ * Threaded View
+ * --------------------------------------------- */
+ .thread-comments {
+  padding-bottom: 9px;
+  margin: 5px 0 5px;
+}
+
+.thread-comments-nav {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.thread-comments .comment-meta {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.thread-comments .media {
+  border-left: 1px dotted #000;
+  border-bottom: 1px dotted #000;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.thread-comments .media-heading {
+  font-size: 12px;
+  color: grey;
+}
+
+.thread-comments .comment-meta a {
+  font-size: 12px;
+  color: grey;
+  font-weight: bolder;
+  margin-right: 5px;
+}
+
+.thread-comments .avatar {
+	display: none;
+}
+/** Loader **/
+
+#loading {
+    background: transparent;
+    border: none;
+    display: none;
+    height: 100px;
+    padding: 10px 10px 10px 60px;
+    position: fixed;
+    width: 300px;
+    z-index: 3000;
+}
+.cssload-container {
+	width: 72px;
+	margin: 58px auto;
+	font-size: 0;
+	position: relative;
+	transform-origin: 50% 50%;
+		-o-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+	animation: cssload-clockwise 6.9s linear infinite;
+		-o-animation: cssload-clockwise 6.9s linear infinite;
+		-ms-animation: cssload-clockwise 6.9s linear infinite;
+		-webkit-animation: cssload-clockwise 6.9s linear infinite;
+		-moz-animation: cssload-clockwise 6.9s linear infinite;
+}
+.cssload-container:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 39px;
+	height: 39px;
+	border: 6px solid rgb(229,229,229);
+	border-radius: 100%;
+		-o-border-radius: 100%;
+		-ms-border-radius: 100%;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+}
+.cssload-container:after {
+	position: absolute;
+	content: '';
+	z-index: -1;
+	top: 0;
+	right: 0;
+	width: 39px;
+	height: 39px;
+	border: 6px solid rgb(229,229,229);
+	border-radius: 100%;
+		-o-border-radius: 100%;
+		-ms-border-radius: 100%;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+}
+
+.cssload-lt, .cssload-rt, .cssload-lb, .cssload-rb {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 39px;
+	height: 19px;
+	opacity: 1;
+}
+.cssload-lt:before, .cssload-rt:before, .cssload-lb:before, .cssload-rb:before {
+	position: absolute;
+	content: '';
+	width: 39px;
+	height: 39px;
+	border-top: 6px solid rgba(105,111,184,0.97);
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid transparent;
+	border-radius: 100%;
+		-o-border-radius: 100%;
+		-ms-border-radius: 100%;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.cssload-lt {
+	margin-right: -6px;
+	animation: cssload-lt 2.3s linear -2300ms infinite;
+		-o-animation: cssload-lt 2.3s linear -2300ms infinite;
+		-ms-animation: cssload-lt 2.3s linear -2300ms infinite;
+		-webkit-animation: cssload-lt 2.3s linear -2300ms infinite;
+		-moz-animation: cssload-lt 2.3s linear -2300ms infinite;
+}
+.cssload-lt:before {
+	top: 0;
+	left: 0;
+	animation: cssload-not-clockwise 1.15s linear infinite;
+		-o-animation: cssload-not-clockwise 1.15s linear infinite;
+		-ms-animation: cssload-not-clockwise 1.15s linear infinite;
+		-webkit-animation: cssload-not-clockwise 1.15s linear infinite;
+		-moz-animation: cssload-not-clockwise 1.15s linear infinite;
+}
+
+.cssload-rt {
+	animation: cssload-lt 2.3s linear -1150ms infinite;
+		-o-animation: cssload-lt 2.3s linear -1150ms infinite;
+		-ms-animation: cssload-lt 2.3s linear -1150ms infinite;
+		-webkit-animation: cssload-lt 2.3s linear -1150ms infinite;
+		-moz-animation: cssload-lt 2.3s linear -1150ms infinite;
+}
+.cssload-rt:before {
+	top: 0;
+	right: 0;
+	animation: cssload-clockwise 1.15s linear infinite;
+		-o-animation: cssload-clockwise 1.15s linear infinite;
+		-ms-animation: cssload-clockwise 1.15s linear infinite;
+		-webkit-animation: cssload-clockwise 1.15s linear infinite;
+		-moz-animation: cssload-clockwise 1.15s linear infinite;
+}
+
+.cssload-lb {
+	margin-right: -6px;
+	animation: cssload-lt 2.3s linear -1725ms infinite;
+		-o-animation: cssload-lt 2.3s linear -1725ms infinite;
+		-ms-animation: cssload-lt 2.3s linear -1725ms infinite;
+		-webkit-animation: cssload-lt 2.3s linear -1725ms infinite;
+		-moz-animation: cssload-lt 2.3s linear -1725ms infinite;
+}
+.cssload-lb:before {
+	bottom: 0;
+	left: 0;
+	animation: cssload-not-clockwise 1.15s linear infinite;
+		-o-animation: cssload-not-clockwise 1.15s linear infinite;
+		-ms-animation: cssload-not-clockwise 1.15s linear infinite;
+		-webkit-animation: cssload-not-clockwise 1.15s linear infinite;
+		-moz-animation: cssload-not-clockwise 1.15s linear infinite;
+}
+
+.cssload-rb {
+	animation: cssload-lt 2.3s linear -575ms infinite;
+		-o-animation: cssload-lt 2.3s linear -575ms infinite;
+		-ms-animation: cssload-lt 2.3s linear -575ms infinite;
+		-webkit-animation: cssload-lt 2.3s linear -575ms infinite;
+		-moz-animation: cssload-lt 2.3s linear -575ms infinite;
+}
+.cssload-rb:before {
+	bottom: 0;
+	right: 0;
+	animation: cssload-clockwise 1.15s linear infinite;
+		-o-animation: cssload-clockwise 1.15s linear infinite;
+		-ms-animation: cssload-clockwise 1.15s linear infinite;
+		-webkit-animation: cssload-clockwise 1.15s linear infinite;
+		-moz-animation: cssload-clockwise 1.15s linear infinite;
+}
+
+@keyframes cssload-clockwise {
+	0% {
+		transform: rotate(-45deg);
+	}
+	100% {
+		transform: rotate(315deg);
+	}
+}
+
+@-o-keyframes cssload-clockwise {
+	0% {
+		-o-transform: rotate(-45deg);
+	}
+	100% {
+		-o-transform: rotate(315deg);
+	}
+}
+
+@-ms-keyframes cssload-clockwise {
+	0% {
+		-ms-transform: rotate(-45deg);
+	}
+	100% {
+		-ms-transform: rotate(315deg);
+	}
+}
+
+@-webkit-keyframes cssload-clockwise {
+	0% {
+		-webkit-transform: rotate(-45deg);
+	}
+	100% {
+		-webkit-transform: rotate(315deg);
+	}
+}
+
+@-moz-keyframes cssload-clockwise {
+	0% {
+		-moz-transform: rotate(-45deg);
+	}
+	100% {
+		-moz-transform: rotate(315deg);
+	}
+}
+
+@keyframes cssload-not-clockwise {
+	0% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(-315deg);
+	}
+}
+
+@-o-keyframes cssload-not-clockwise {
+	0% {
+		-o-transform: rotate(45deg);
+	}
+	100% {
+		-o-transform: rotate(-315deg);
+	}
+}
+
+@-ms-keyframes cssload-not-clockwise {
+	0% {
+		-ms-transform: rotate(45deg);
+	}
+	100% {
+		-ms-transform: rotate(-315deg);
+	}
+}
+
+@-webkit-keyframes cssload-not-clockwise {
+	0% {
+		-webkit-transform: rotate(45deg);
+	}
+	100% {
+		-webkit-transform: rotate(-315deg);
+	}
+}
+
+@-moz-keyframes cssload-not-clockwise {
+	0% {
+		-moz-transform: rotate(45deg);
+	}
+	100% {
+		-moz-transform: rotate(-315deg);
+	}
+}
+
+@keyframes cssload-lt {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	26% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes cssload-lt {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	26% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes cssload-lt {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	26% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes cssload-lt {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	26% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes cssload-lt {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	26% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}}
+
+/* Overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
