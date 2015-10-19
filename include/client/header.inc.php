@@ -202,7 +202,7 @@
    <div id="content">
    <div class="col-md-12">
    <?php if($errors['err']) { ?>
-   <div id="msg_error" class="alert alert-error"><?php echo $errors['err']; ?></div>
+   <div id="msg_error" class="alert alert-danger"><?php echo $errors['err']; ?></div>
    <?php }elseif($msg) { ?>
    <div id="msg_notice" class="alert alert-info"><?php echo $msg; ?></div>
    <?php }elseif($warn) { ?>
