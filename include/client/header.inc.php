@@ -175,29 +175,7 @@
       <!-- /.container-fluid -->
    </nav>
    <!-- End /nav -->
-   <p>
-   <?php
-      if ($thisclient && is_object($thisclient) && $thisclient->isValid()
-          && !$thisclient->isGuest()) {
-       echo Format::htmlchars($thisclient->getName()).'&nbsp;|';
-       ?>
-   <a href="<?php echo ROOT_PATH; ?>profile.php"><?php echo __('Profile'); ?></a> |
-   <a href="<?php echo ROOT_PATH; ?>tickets.php"><?php echo sprintf(__('Tickets <b>(%d)</b>'), $thisclient->getNumTickets()); ?></a> -
-   <a href="<?php echo $signout_url; ?>"><?php echo __('Sign Out'); ?></a>
-   <?php
-      } elseif($nav) {
-          if ($cfg->getClientRegistrationMode() == 'public') { ?>
-   <?php echo __('Guest User'); ?> | <?php
-      }
-      if ($thisclient && $thisclient->isValid() && $thisclient->isGuest()) { ?>
-   <a href="<?php echo $signout_url; ?>"><?php echo __('Sign Out'); ?></a><?php
-      }
-      elseif ($cfg->getClientRegistrationMode() != 'disabled') { ?>
-   <a href="<?php echo $signin_url; ?>"><?php echo __('Sign In'); ?></a>
-   <?php
-      }
-      } ?>
-   </p>
+   <br><br><br>
    <div id="content">
    <div class="col-md-12">
    <?php if($errors['err']) { ?>
