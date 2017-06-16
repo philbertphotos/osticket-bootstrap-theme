@@ -50,7 +50,9 @@ if ($_POST) {
             @header('Location: tickets.php?id='.$ticket->getId());
         }
     }else{
-        $errors['err']=$errors['err']?$errors['err']:__('Unable to create a ticket. Please correct errors below and try again!');
+        $errors['err'] = $errors['err'] ?: sprintf('%s %s',
+            __('Unable to create a ticket.'),
+            __('Correct any errors below and try again.'));
     }
 }
 
@@ -77,15 +79,11 @@ if ($ticket
     )
 ) {
     // Thank the user and promise speedy resolution!
-    echo '<div class="container topheader"> <div class="row">'; 
     echo Format::viewableImages(
         $ticket->replaceVars(
             $page->getLocalBody()
         )
     );
-    echo '</div>
-    </div>
-    <div class="topheader"></div>';
 }
 else {
     require(CLIENTINC_DIR.'open.inc.php');
