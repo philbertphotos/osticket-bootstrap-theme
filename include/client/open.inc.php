@@ -1,6 +1,3 @@
-<div class="container"> <div class="row"> 
-<div class="col-md-12 inwrap">
-
 <?php
 if(!defined('OSTCLIENTINC')) die('Access Denied!');
 $info=array();
@@ -30,38 +27,22 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
 }
 
 ?>
-
-<div class="container topheader"><div class="row">
-<h1><?php echo __('Open a New Ticket');?></h1>
-<p><?php echo __('Please fill in the form below to open a new ticket.');?></p>
+<div class="row">
+<div class="page-title">
+	<h1><?php echo __('Open a New Ticket');?></h1>
+	<div><?php echo __('Please fill in the form below to open a new ticket.');?></div>
+</div>
+</div>
 <form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
   <?php csrf_token(); ?>
   <input type="hidden" name="a" value="open">
 
-<?php
-        if (!$thisclient) {
-            $uform = UserForm::getUserForm()->getForm($_POST);
-            if ($_POST) $uform->isValid();
-            $uform->render(false);
-        }
-        else { ?>
-           <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"> <?php echo __('User Info');?> </h3>
-                    <em> Account Details</em>
-                </div>
-                <div class="panel-body">
-                    <table>
-                    <tr><td><b><?php echo __('Email'); ?>:</b></td><td><?php echo $thisclient->getEmail(); ?></td></tr>
-                    <tr><td><b><?php echo __('Client'); ?>:</b></td><td><?php echo $thisclient->getName(); ?></td></tr>
-                    </table>
-                </div>
-            </div>
-        <?php } ?>
         <div class="panel panel-default">
 
             <div class="panel-heading">
+			<div class="form-header" style="margin-bottom:0.5em">
                 <h3 class="panel-title"> <?php echo __('Help Topic');?> </h3>
+				</div>
                 <em>  <?php echo __('Select the Relevant Topic');?>  </em>
             </div>
             <div class="panel-body">
@@ -92,13 +73,11 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
                 <font class="error"><?php echo $errors['topicId']; ?></font>
             </div>
         </div>
-
-
-        <div id="dynamic-form">
-            <?php if ($form) {
-                include(CLIENTINC_DIR . 'templates/dynamic-form.tmpl.php');
-            } ?>
-        </div>
+    <div id="dynamic-form">
+        <?php foreach ($forms as $form) {
+            include(CLIENTINC_DIR . 'templates/dynamic-form.tmpl.php');
+        } ?>
+    </div>
     <tbody>
     <?php
     if($cfg && $cfg->isCaptchaEnabled() && (!$thisclient || !$thisclient->isValid())) {
@@ -117,12 +96,13 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
     </tr>
     <?php
     } ?>
-    <tr><td colspan=2>&nbsp;</td></tr>
+   
     </tbody>
-  <p class="buttons" style="text-align:center;">
-        <input class="btn btn-primary" type="submit" value="<?php echo __('Create Ticket');?>">
-        <input class="btn" type="reset" name="reset" value="<?php echo __('Reset');?>">
-        <input class="btn" type="button" name="cancel" value="<?php echo __('Cancel'); ?>" onclick="javascript:
+  </table>
+  <p class="buttons" >
+        <input class="btn btn-success" type="submit" value="<?php echo __('Create Ticket');?>">
+        <input class="btn btn-warning" type="reset" name="reset" value="<?php echo __('Reset');?>">
+        <input class="btn btn-default" type="button" name="cancel" value="<?php echo __('Cancel'); ?>" onclick="javascript:
             $('.richtext').each(function() {
                 var redactor = $(this).data('redactor');
                 if (redactor && redactor.opts.draftDelete)
@@ -131,6 +111,4 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
             window.location.href='index.php';">
   </p>
 </form>
-</div>
-</div></div>
-</div></div>
+<div class="clearfix"></div>
