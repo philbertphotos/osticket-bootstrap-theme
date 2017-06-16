@@ -2,14 +2,13 @@
 $events = $events
     ->filter(array('state__in' => array('created', 'closed', 'reopened', 'edited', 'collab')))
     ->order_by('id');
-$events = $events->getIterator();
+$events = new IteratorIterator($events->getIterator());
 $events->rewind();
 $event = $events->current();
 
 $htmlId = $options['html-id'] ?: ('thread-'.$this->getId());
-$htmlClass = $options['html-class'] ?: ('sone-'.$this->getId());
 ?>
-<!--<div class="<?php echo $htmlClass; ?>" id="<?php echo $htmlId; ?>" data-thread-id="<?php echo $this->getId(); ?>">-->
+<div id="<?php echo $htmlId; ?>" data-thread-id="<?php echo $this->getId(); ?>">
 <?php
 if (count($entries)) {
     // Go through all the entries and bucket them by time frame
@@ -24,7 +23,6 @@ if (count($entries)) {
     }
 
     // Go back through the entries and render them on the page
-	//echo "test: " . json_encode($buckets);
     $i = 0;
     foreach ($buckets as $rel=>$entries) {
         // TODO: Consider adding a date boundary to indicate significant
@@ -48,6 +46,13 @@ while ($event) {
     $events->next();
     $event = $events->current();
 }
+
+// This should never happen
+if (count($entries) + count($events) == 0) {
+    echo '<p><em>'.__('No entries have been posted to this thread.').'</em></p>';
+}
+?>
+</div>
 
 // This should never happen
 if (count($entries) + count($events) == 0) {
