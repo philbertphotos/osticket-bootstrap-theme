@@ -50,4 +50,3 @@ $BUTTONS = isset($BUTTONS) ? $BUTTONS : true;
     }
         ?></div>
     </div>
-
