@@ -53,10 +53,3 @@ if (count($entries) + count($events) == 0) {
 }
 ?>
 </div>
-
-// This should never happen
-if (count($entries) + count($events) == 0) {
-    echo '<p><em>'.__('No entries have been posted to this thread.').'</em></p>';
-}
-?>
-<!--</div>-->
