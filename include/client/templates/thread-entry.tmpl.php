@@ -1,52 +1,42 @@
 <?php
+global $cfg;
 $entryTypes = array('M'=>'message', 'R'=>'response', 'N'=>'note');
 $user = $entry->getUser() ?: $entry->getStaff();
 $name = $user ? $user->getName() : $entry->poster;
 $avatar = '';
-if ($user)
+if ($cfg->isAvatarsEnabled() && $user)
     $avatar = $user->getAvatar();
 ?>
-<!--         <div class="media-heading">
-          <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">12314</span> vertu 12 sat once yazmis
-        </div>
--->
 
-<!--<div class=" <?php echo $entryTypes[$entry->type]; ?> <?php if ($avatar) echo 'avatar'; ?>">
+<div class="thread-entry <?php echo $entryTypes[$entry->type]; ?> <?php if ($avatar) echo 'avatar'; ?>">
 <?php if ($avatar) { ?>
     <span class="<?php echo ($entry->type == 'M') ? 'pull-left' : 'pull-right'; ?> avatar">
 <?php echo $avatar; ?>
-    </span>-->
+    </span>
 <?php } ?>
-
-    <div class="media-heading">
-          <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#thread-id-<?php echo $entry->getId(); ?>" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info"><?php if ($entry->flags & ThreadEntry::FLAG_EDITED) { ?>
+    <div class="header">
+        <div class="pull-right">
+            <span style="vertical-align:middle;" class="textra">
+        <?php if ($entry->flags & ThreadEntry::FLAG_EDITED) { ?>
                 <span class="label label-bare" title="<?php
         echo sprintf(__('Edited on %s by %s'), Format::datetime($entry->updated), 'You');
                 ?>"><?php echo __('Edited'); ?></span>
-        <?php } ?></span>
+        <?php } ?>
+            </span>
+        </div>
 <?php
             echo sprintf(__('<b>%s</b> posted %s'), $name,
-                sprintf('<time class="relative" datetime="%s" title="%s">%s</time>',
+                sprintf('<time datetime="%s" title="%s">%s</time>',
                     date(DateTime::W3C, Misc::db2gmtime($entry->created)),
                     Format::daydatetime($entry->created),
-                    Format::relativeTime(Misc::db2gmtime($entry->created))
+                    Format::datetime($entry->created)
                 )
             ); ?>
             <span style="max-width:500px" class="faded title truncate"><?php
                 echo $entry->title; ?></span>
             </span>
     </div>
-<div class="panel-collapse collapse in" id="thread-id-<?php echo $entry->getId(); ?>">
-          <div class="media-left">
-            <div class="vote-wrap">
-              <div class="save-post">
-                <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
-              </div>
-            </div>
-            <!-- vote-wrap -->
-          </div>
-          <!-- media-left -->
-    <div class="media-body">
+    <div class="thread-body" id="thread-id-<?php echo $entry->getId(); ?>">
         <div><?php echo $entry->getBody()->toHtml(); ?></div>
         <div class="clear"></div>
 <?php
@@ -70,13 +60,6 @@ if ($user)
     </div>
 <?php } ?>
     </div>
-	          <div class="comment-meta">
-              <!--<span><a href="#">delete</a></span>
-              <span><a href="#">report</a></span>-->
-              <span><a href="#">hide</a></span>
-            </div>
-	</div>
-
 <?php
     if ($urls = $entry->getAttachmentUrls()) { ?>
         <script type="text/javascript">
@@ -87,4 +70,4 @@ if ($user)
         </script>
 <?php
     } ?>
-<!--</div>-->
+</div>
