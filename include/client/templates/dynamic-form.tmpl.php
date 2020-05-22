@@ -22,6 +22,7 @@ $(document).ready(function(){
     //$(this).addClass("form-control");
 	//$(':input,:checkbox,:radio').addClass('YOUR_CLASSNAME');
 	$('input[type=text]').addClass('form-control');
+	$('input[type=tel]').addClass('form-control');
 	$('select').addClass('form-control');
 });
 /*$("[data-toggle=popover]").popover({

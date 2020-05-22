@@ -20,8 +20,7 @@ require_once INCLUDE_DIR . 'class.page.php';
 $section = 'home';
 require(CLIENTINC_DIR.'header.inc.php');
 ?>
-
-	<div class="clearfix"></div>
+<div class="clearfix"></div>
 <div id="landing_page" class="container">
     <div class="row">
         <div class="col-xs-12 col-md-8">
