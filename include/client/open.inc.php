@@ -37,6 +37,18 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
   <?php csrf_token(); ?>
   <input type="hidden" name="a" value="open">
 
+        <h3 class="panel-title"> <?php
+        if (!$thisclient) {
+            $uform = UserForm::getUserForm()->getForm($_POST);
+            if ($_POST) $uform->isValid();
+            $uform->render(array('staff' => false, 'mode' => 'create'));
+        }
+        else { ?> </h3>
+      
+		<?php echo __('Email'); ?>: <?php echo $thisclient->getEmail(); ?>
+		<?php echo __('Client'); ?>:</td><td><?php echo Format::htmlchars($thisclient->getName()); ?>
+        <?php } ?>
+		
         <div class="panel panel-default">
 
             <div class="panel-heading">
